@@ -2,8 +2,10 @@
   "name": "nexvory-it-technologies",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "description": "Nexvory IT Technologies — Official Enterprise IT Facilities & Digital Solutions",
   "scripts": {
-    "build": "echo 'Static build ready for Vercel deployment'"
+    "build": "node build.js",
+    "start": "serve dist"
   }
 }
