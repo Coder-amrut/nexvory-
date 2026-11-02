@@ -5,7 +5,8 @@ import type {
   CaseStudyItem,
   ProcessStage,
   TechItem,
-  InsightArticle
+  InsightArticle,
+  TeamMember
 } from '../types';
 
 export const COMPANY_INFO = {
@@ -19,7 +20,11 @@ export const COMPANY_INFO = {
   contactEmail: 'engineering@abc-systems.digital',
   phone: '+1 (800) 412-8800',
   headquarters: 'San Francisco, CA & Distributed Global Architecture Nodes',
-  status: 'GLOBAL SYSTEM ONLINE // 99.999% HEALTH'
+  status: 'GLOBAL SYSTEM ONLINE // 99.999% HEALTH',
+  websitesDelivered: '10+',
+  happyClients: '10+',
+  clientSatisfaction: '100%',
+  uptimeSLA: '99.999%'
 };
 
 export const SERVICES: ServiceItem[] = [
@@ -597,10 +602,57 @@ export const WHY_ABC = [
 ];
 
 export const TRUST_PROOFS = [
+  { label: 'Websites & Platforms Delivered', value: '10+', description: 'Engineered, deployed, and validated across modern enterprise production environments' },
+  { label: 'Satisfied Enterprise Clients', value: '10+', description: 'Direct partnerships with 100% on-time delivery and post-launch technical support' },
   { label: 'Uptime Architecture Standard', value: '99.999%', description: 'Engineered for less than 5.2 minutes of unplanned downtime per year' },
-  { label: 'Security Framework Alignment', value: 'SOC 2 Type II', description: 'Ready architecture adhering strictly to AICPA trust service criteria' },
-  { label: 'Privacy & Data Governance', value: 'ISO 27001 / GDPR', description: 'Full cryptographic compartmentalization and regional data residency' },
-  { label: 'Sub-Millisecond Routing', value: '< 2.5ms', description: 'Internal service-to-service communication latency across mesh nodes' }
+  { label: 'Sub-Millisecond Latency Routing', value: '< 2.5ms', description: 'Internal service-to-service communication latency across distributed cloud nodes' }
+];
+
+export const LEADERSHIP_TEAM: TeamMember[] = [
+  {
+    id: 'amrutkiran-kshirsagar',
+    name: 'Amrutkiran Kshirsagar',
+    role: 'Founder & Principal Software Architect',
+    education: 'MCA — Master of Computer Applications',
+    degreeBadge: 'MCA (Computer Applications)',
+    experienceHighlight: 'Lead Software Architect for 10+ Enterprise Web Applications & Systems',
+    specialization: [
+      'Full-Stack Enterprise Software Architecture',
+      'High-Concurrency Distributed Web Platforms',
+      'Interactive 3D WebGL & Modern Frontend Systems',
+      'API Engineering, Microservices & Data Modeling'
+    ],
+    bio: 'Post-graduate in Computer Applications (MCA) with deep architectural expertise in full-stack engineering, reactive design systems, and high-throughput web platforms. Amrutkiran has architected, engineered, and successfully delivered over 10 mission-critical websites and enterprise platforms with 100% client satisfaction and zero architectural downtime.',
+    verifiedDeliveries: '10+ High-Performance Websites & Platforms',
+    happyClientsCount: '10+ Satisfied Enterprise Clients',
+    metrics: [
+      { label: 'Websites Delivered', value: '10+' },
+      { label: 'Client Satisfaction', value: '100%' },
+      { label: 'Architecture Scale', value: 'P99 < 15ms' }
+    ]
+  },
+  {
+    id: 'pratik-salunkhe',
+    name: 'Pratik Salunkhe',
+    role: 'Co-Founder & Lead DevOps / Cloud Systems Engineer',
+    education: 'Bachelor of Engineering (B.E.) — DevOps & Cloud Infrastructure',
+    degreeBadge: 'B.E. Engineering (DevOps)',
+    experienceHighlight: 'Architected Resilient Cloud & DevOps Mesh for 10+ Production Deployments',
+    specialization: [
+      'Kubernetes Cluster Mesh & Container Orchestration',
+      'Multi-Region Cloud Architecture (AWS, GCP, Bare Metal)',
+      'GitOps Declarative CI/CD Automated Pipelines',
+      'DevSecOps, eBPF Kernel Routing & 99.999% SLA Uptime'
+    ],
+    bio: 'Engineering graduate specializing in DevOps and Cloud Systems. Pratik engineers declarative cloud topologies, containerized Kubernetes meshes, automated CI/CD pipelines, and zero-trust security perimeters. He has overseen cloud orchestration and continuous delivery across all 10+ client platforms, guaranteeing resilient horizontal scalability and zero-downtime cutovers.',
+    verifiedDeliveries: '10+ Enterprise Cloud Topologies Deployed',
+    happyClientsCount: '10+ Happy Enterprise Organizations',
+    metrics: [
+      { label: 'Cloud Deployments', value: '10+' },
+      { label: 'Production Uptime', value: '99.999%' },
+      { label: 'Deployment Failure Rate', value: '0.0%' }
+    ]
+  }
 ];
 
 export const INSIGHTS: InsightArticle[] = [

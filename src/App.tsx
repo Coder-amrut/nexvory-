@@ -12,6 +12,7 @@ import { CaseStudiesSection } from './components/CaseStudiesSection';
 import { ProcessSection } from './components/ProcessSection';
 import { TechEcosystemSection } from './components/TechEcosystemSection';
 import { WhyABCSection } from './components/WhyABCSection';
+import { LeadershipTeamSection } from './components/LeadershipTeamSection';
 import { TrustSection } from './components/TrustSection';
 import { InsightsSection } from './components/InsightsSection';
 import { ContactSection } from './components/ContactSection';
@@ -86,6 +87,9 @@ export const App: React.FC = () => {
 
         {/* Section 09: Why ABC */}
         <WhyABCSection />
+
+        {/* Section 09B: Engineering Leadership & Founders (Amrutkiran & Pratik) */}
+        <LeadershipTeamSection />
 
         {/* Section 10: Trust & Proof */}
         <TrustSection />

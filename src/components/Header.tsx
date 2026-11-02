@@ -34,7 +34,8 @@ export const Header: React.FC<HeaderProps> = ({
     { name: 'Intelligence Core', href: '#intelligence-core' },
     { name: 'Industries', href: '#industries' },
     { name: 'Case Studies', href: '#work' },
-    { name: 'Engineering Process', href: '#process' },
+    { name: 'Process', href: '#process' },
+    { name: 'Leadership', href: '#leadership' },
     { name: 'Insights', href: '#insights' },
   ];
 

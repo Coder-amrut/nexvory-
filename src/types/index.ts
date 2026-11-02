@@ -84,3 +84,18 @@ export interface InsightArticle {
     role: string;
   };
 }
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  education: string;
+  degreeBadge: string;
+  experienceHighlight: string;
+  specialization: string[];
+  bio: string;
+  verifiedDeliveries: string;
+  happyClientsCount: string;
+  metrics: { label: string; value: string }[];
+}
+

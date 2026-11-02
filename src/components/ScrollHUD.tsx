@@ -11,9 +11,10 @@ const CHAPTERS = [
   { id: 'process', number: '07', label: 'PROCESS' },
   { id: 'technology', number: '08', label: 'TECH MATRIX' },
   { id: 'why-abc', number: '09', label: 'WHY ABC' },
-  { id: 'trust', number: '10', label: 'PROOF' },
-  { id: 'insights', number: '11', label: 'INSIGHTS' },
-  { id: 'contact', number: '12', label: 'CONTACT' },
+  { id: 'leadership', number: '10', label: 'LEADERSHIP' },
+  { id: 'trust', number: '11', label: 'PROOF' },
+  { id: 'insights', number: '12', label: 'INSIGHTS' },
+  { id: 'contact', number: '13', label: 'CONTACT' },
 ];
 
 export const ScrollHUD: React.FC = () => {

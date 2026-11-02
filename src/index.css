@@ -22,9 +22,9 @@
   --text-muted: #64748B;
   --text-dim: #475569;
 
-  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Arial', 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Arial', 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 }
 
 * {
@@ -37,7 +37,7 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-sans);
+  font-family: 'Arial', 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

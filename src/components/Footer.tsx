@@ -36,14 +36,33 @@ export const Footer: React.FC = () => {
                 {COMPANY_INFO.tagline} Architecting resilient software backends, neural inference models, distributed cloud infrastructure, and zero-trust cybersecurity for modern enterprises.
               </p>
 
-              <div className="flex items-center gap-2 font-mono text-xs text-slate-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>{COMPANY_INFO.status}</span>
+              <div className="flex flex-col gap-2 font-mono text-xs text-slate-400">
+                <div className="flex items-center gap-2 text-cyan-400 font-semibold">
+                  <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                  <span>10+ Websites Delivered • 10+ Happy Clients</span>
+                </div>
+                <div className="text-[11px] text-slate-400">
+                  Leadership: <strong className="text-white">Amrutkiran Kshirsagar (MCA)</strong> & <strong className="text-white">Pratik Salunkhe (B.E. DevOps)</strong>
+                </div>
+                <div className="flex items-center gap-2 text-slate-400 text-[11px] mt-1">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                  <span>{COMPANY_INFO.status}</span>
+                </div>
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-white/5 font-mono text-xs text-slate-500">
-              COORDINATES: {COMPANY_INFO.coordinates}
+            <div className="mt-8 pt-6 border-t border-white/5 font-mono text-xs text-slate-500 flex flex-wrap items-center justify-between gap-2">
+              <span>COORDINATES: {COMPANY_INFO.coordinates}</span>
+              <a
+                href="#leadership"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('leadership')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="text-cyan-400 hover:underline text-[11px]"
+              >
+                Meet the Founders →
+              </a>
             </div>
           </div>
 

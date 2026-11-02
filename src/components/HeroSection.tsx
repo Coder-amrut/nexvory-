@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, ArrowUpRight, Cpu, ShieldCheck, Database, Terminal } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Terminal } from 'lucide-react';
 import { COMPANY_INFO } from '../data/siteData';
 import { audioEngine } from '../utils/audio';
 
@@ -75,30 +75,30 @@ export const HeroSection: React.FC = () => {
           </button>
         </div>
 
-        {/* Micro Telemetry Pillars */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-12 mt-12 border-t border-white/10">
-          <div className="flex items-center gap-3">
-            <Cpu className="w-5 h-5 text-cyan-400 shrink-0" />
-            <div>
-              <div className="font-mono text-xs text-white font-bold">DETERMINISTIC AI</div>
-              <div className="text-[11px] text-slate-400">Quantized Neural Inference</div>
-            </div>
+        {/* Micro Telemetry Pillars & Track Record */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-10 mt-10 border-t border-white/10">
+          <div className="p-3 rounded-xl bg-slate-900/60 border border-cyan-500/30 flex flex-col justify-center">
+            <div className="font-mono text-2xl font-black text-cyan-400">10+</div>
+            <div className="font-mono text-[10px] text-white font-bold uppercase tracking-wider">Websites Delivered</div>
+            <div className="text-[10px] text-slate-400">Production Live</div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <Database className="w-5 h-5 text-blue-400 shrink-0" />
-            <div>
-              <div className="font-mono text-xs text-white font-bold">STREAMING MESH</div>
-              <div className="text-[11px] text-slate-400">Sub-Second Lakehouses</div>
-            </div>
+          <div className="p-3 rounded-xl bg-slate-900/60 border border-blue-500/30 flex flex-col justify-center">
+            <div className="font-mono text-2xl font-black text-blue-400">10+</div>
+            <div className="font-mono text-[10px] text-white font-bold uppercase tracking-wider">Happy Clients</div>
+            <div className="text-[10px] text-slate-400">100% Retained</div>
           </div>
 
-          <div className="hidden sm:flex items-center gap-3">
-            <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
-            <div>
-              <div className="font-mono text-xs text-white font-bold">ZERO-TRUST SEC</div>
-              <div className="text-[11px] text-slate-400">mTLS & Kernel eBPF</div>
-            </div>
+          <div className="p-3 rounded-xl bg-slate-900/60 border border-emerald-500/30 flex flex-col justify-center">
+            <div className="font-mono text-2xl font-black text-emerald-400">MCA & B.E.</div>
+            <div className="font-mono text-[10px] text-white font-bold uppercase tracking-wider">Founders Led</div>
+            <div className="text-[10px] text-slate-400">Software & DevOps</div>
+          </div>
+
+          <div className="p-3 rounded-xl bg-slate-900/60 border border-purple-500/30 flex flex-col justify-center">
+            <div className="font-mono text-2xl font-black text-purple-400">99.999%</div>
+            <div className="font-mono text-[10px] text-white font-bold uppercase tracking-wider">SLA Uptime</div>
+            <div className="text-[10px] text-slate-400">Zero-Trust Security</div>
           </div>
         </div>
       </div>
