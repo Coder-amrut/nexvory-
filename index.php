@@ -62,8 +62,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Company & Leadership Data
-$company_name = "Nexvory Pvt. Ltd.";
+$company_name = "Nexvory IT Technologies";
 $tagline = "Innovate · Build · Grow";
+$company_email = "contact@nexvory.com";
+$company_email_alt = "info@nexvory.com";
+$phone_amrutkiran = "+91 9373799792";
+$phone_pratik = "+91 9923729253";
+
 $stats = [
     ['num' => '10+', 'label' => 'Websites & Platforms Delivered', 'icon' => '✧'],
     ['num' => '10+', 'label' => 'Happy Enterprise Clients', 'icon' => '⌘'],
@@ -122,6 +127,8 @@ $founders = [
         'degree' => 'Master of Computer Applications (MCA)',
         'role' => 'Fullstack Developer & Industry Expert',
         'title' => 'Founder & Principal Software Architect',
+        'phone' => '+91 9373799792',
+        'phone_raw' => '9373799792',
         'desc' => 'Post-graduate in Computer Applications with extensive industry expertise in fullstack software architecture, scalable web technologies, database modeling, and modern reactive systems. Successfully architected and shipped over 10 enterprise platforms with 100% client satisfaction.',
         'badges' => ['MCA Post Graduate', 'Fullstack Developer', 'Industry Expert', '10+ Delivered Websites'],
         'stat' => '10+ Web Platforms'
@@ -131,6 +138,8 @@ $founders = [
         'degree' => 'Bachelor of Engineering (B.E.)',
         'role' => 'DevOps Engineer & Industry Expert',
         'title' => 'Co-Founder & Lead Cloud Systems Engineer',
+        'phone' => '+91 9923729253',
+        'phone_raw' => '9923729253',
         'desc' => 'Engineering graduate and seasoned DevOps industry expert specializing in multi-region cloud topology, containerized Kubernetes meshes, automated CI/CD GitOps pipelines, and zero-trust infrastructure. Guarantees 99.99% high availability and seamless production deployments.',
         'badges' => ['B.E. Engineering', 'DevOps Specialist', 'Industry Expert', 'Cloud Mesh Architect'],
         'stat' => '99.99% Uptime'
@@ -145,6 +154,7 @@ $founders = [
 <meta name="theme-color" content="#071426">
 <title><?= htmlspecialchars($company_name) ?> | <?= htmlspecialchars($tagline) ?></title>
 <meta name="description" content="<?= htmlspecialchars($company_name) ?> — Complete IT Facilities, Custom Software Development, Cloud & DevOps Infrastructure, and Enterprise Web Platforms.">
+<link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -183,7 +193,9 @@ h2{font-size:clamp(32px,4vw,49px)}
 .topline b{color:var(--lime)}
 header{height:76px;position:sticky;top:0;z-index:30;background:#071426eF;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
 .nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}
-.logo{display:flex;align-items:center;gap:10px;font:800 21px Manrope,Arial;letter-spacing:-.06em}
+.logo{display:flex;align-items:center;gap:12px;font:800 21px Manrope,Arial;letter-spacing:-.06em}
+.brand-logo-img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid rgba(0,212,255,0.6);box-shadow:0 0 16px rgba(0,212,255,0.35),0 0 8px rgba(201,255,61,0.25);transition:transform .3s ease;display:block}
+.logo:hover .brand-logo-img{transform:rotate(5deg) scale(1.05)}
 .logo-mark{width:38px;height:38px;display:grid;place-items:center;background:linear-gradient(135deg,#e4ff92,var(--lime2));color:#071426;border-radius:12px 5px 12px 5px;font:900 24px Manrope;transform:rotate(-4deg);box-shadow:0 0 25px #c9ff3d22}
 .logo small{display:block;font:700 9px "DM Sans",Arial;letter-spacing:.12em;color:#9cacc0;margin-top:-3px}
 .links{display:flex;align-items:center;gap:25px;font-size:12.5px;color:#d2dce8;font-weight:600}
@@ -387,8 +399,14 @@ footer{background:#030a14;padding:40px 0 24px}
 <!-- Top Announcement Line -->
 <div class="topline">
   <div class="wrap">
-    <span><b>INTRODUCING NEXVORY PVT. LTD.</b> &nbsp; Complete IT Facilities, Software & Cloud Systems.</span>
-    <span><b>10+</b> Websites Delivered &nbsp;•&nbsp; <b>10+</b> Happy Clients &nbsp; <b>↗</b></span>
+    <span><b>NEXVORY IT TECHNOLOGIES</b> &nbsp; Complete IT Facilities, Fullstack Software & Cloud DevOps</span>
+    <span style="display:inline-flex;gap:12px;align-items:center;flex-wrap:wrap;">
+      <a href="mailto:<?= htmlspecialchars($company_email) ?>" style="color:var(--lime);font-weight:700;">✉ <?= htmlspecialchars($company_email) ?></a>
+      <span style="color:#ffffff33;">|</span>
+      <a href="tel:+919373799792" style="color:#d2dce8;">📞 Amrutkiran: <b style="color:white">+91 9373799792</b></a>
+      <span style="color:#ffffff33;">|</span>
+      <a href="tel:+919923729253" style="color:#d2dce8;">Pratik: <b style="color:white">+91 9923729253</b></a>
+    </span>
   </div>
 </div>
 
@@ -396,8 +414,8 @@ footer{background:#030a14;padding:40px 0 24px}
 <header>
   <div class="wrap nav">
     <a class="logo" href="#home">
-      <span class="logo-mark">N</span>
-      <span>Nexvory<small>PRIVATE LIMITED</small></span>
+      <img src="assets/logo.png" alt="Nexvory IT Technologies Logo" class="brand-logo-img">
+      <span>Nexvory<small>IT TECHNOLOGIES</small></span>
     </a>
     <nav class="links" id="links">
       <a href="#home">Home</a>
@@ -409,7 +427,7 @@ footer{background:#030a14;padding:40px 0 24px}
       <a href="#contact">Contact Us</a>
     </nav>
     <div class="navright">
-      <a class="btn" href="#contact">Get in touch <span>↗</span></a>
+      <a class="btn" href="#contact">Get in touch <span>→</span></a>
       <button class="hamb" id="hamb" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     </div>
   </div>
@@ -557,6 +575,14 @@ footer{background:#030a14;padding:40px 0 24px}
                 <span>✓ <?= htmlspecialchars($b) ?></span>
               <?php endforeach; ?>
             </div>
+            <div style="margin-top:20px;padding-top:16px;border-top:1px solid #ffffff14;display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+              <a href="tel:+91<?= $f['phone_raw'] ?>" style="display:inline-flex;align-items:center;gap:6px;background:#0d243c;border:1px solid #c9ff3d55;color:var(--lime);padding:7px 14px;border-radius:999px;font-size:11.5px;font-weight:700;transition:.2s;">
+                <span>📞</span> <?= $f['phone'] ?>
+              </a>
+              <a href="https://wa.me/91<?= $f['phone_raw'] ?>?text=Hello%20<?= urlencode($f['name']) ?>%2C%20I%20would%20like%20to%20discuss%20an%20IT%20project" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:#1b4d2e;border:1px solid #25D36666;color:#55f088;padding:7px 14px;border-radius:999px;font-size:11.5px;font-weight:700;transition:.2s;">
+                <span>💬</span> WhatsApp
+              </a>
+            </div>
           </div>
         <?php endforeach; ?>
       </div>
@@ -686,28 +712,45 @@ footer{background:#030a14;padding:40px 0 24px}
       <div class="contact-copy">
         <div class="micro">Get in touch</div>
         <h2>What are you<br>looking to <span style="color:#76a91b">build?</span></h2>
-        <p>Share a little about your requirement, challenge, or upcoming project. Our founding engineers will connect directly with you.</p>
+        <p>Share a little about your requirement, challenge, or upcoming project. Connect with our company or reach our founders directly.</p>
 
         <div class="contact-info">
+          <!-- 1st: Company Demo Emails (Featured First) -->
           <div class="info">
             <i>✉</i>
             <div>
-              <b>Direct Email</b>
-              <span>engineering@nexvory.digital</span>
+              <b>Official Company Email</b>
+              <a href="mailto:<?= htmlspecialchars($company_email) ?>" style="color:#071426;font-size:14px;font-weight:800;text-decoration:underline;"><?= htmlspecialchars($company_email) ?></a>
+              <div style="font-size:11.5px;color:#647286;margin-top:2px;">Demo / Info: <a href="mailto:<?= htmlspecialchars($company_email_alt) ?>" style="color:#104071;font-weight:600;"><?= htmlspecialchars($company_email_alt) ?></a></div>
             </div>
           </div>
+
+          <!-- Direct Founders Phone & WhatsApp -->
           <div class="info">
-            <i>⌖</i>
+            <i>📞</i>
             <div>
-              <b>Leadership & Facilities</b>
-              <span>Amrutkiran Kshirsagar (MCA) & Pratik Salunkhe (B.E. DevOps)</span>
+              <b>Direct Founders Phone & WhatsApp</b>
+              <div style="margin-top:6px;display:flex;flex-direction:column;gap:6px;">
+                <div style="font-size:12px;">
+                  <b>Amrutkiran:</b> 
+                  <a href="tel:+919373799792" style="color:#071426;font-weight:800;margin-left:4px;">+91 9373799792</a>
+                  <a href="https://wa.me/919373799792?text=Hello%20Amrutkiran%2C%20I%20would%20like%20to%20discuss%20an%20IT%20project" target="_blank" rel="noopener" style="margin-left:6px;background:#25D36618;border:1px solid #25D36655;color:#137333;padding:2px 8px;border-radius:6px;font-size:10.5px;font-weight:700;">WhatsApp ↗</a>
+                </div>
+                <div style="font-size:12px;">
+                  <b>Pratik:</b> 
+                  <a href="tel:+919923729253" style="color:#071426;font-weight:800;margin-left:4px;">+91 9923729253</a>
+                  <a href="https://wa.me/919923729253?text=Hello%20Pratik%2C%20I%20would%20like%20to%20discuss%20an%20IT%20project" target="_blank" rel="noopener" style="margin-left:6px;background:#25D36618;border:1px solid #25D36655;color:#137333;padding:2px 8px;border-radius:6px;font-size:10.5px;font-weight:700;">WhatsApp ↗</a>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- Availability & Facilities -->
           <div class="info">
             <i>◷</i>
             <div>
               <b>Availability & SLA</b>
-              <span>Mon – Sat: 09:00 – 19:00 IST (24/7 Managed IT Support)</span>
+              <span>Mon – Sat: 09:00 – 19:00 IST (24/7 Managed IT & Cloud SLA)</span>
             </div>
           </div>
         </div>
@@ -766,10 +809,8 @@ footer{background:#030a14;padding:40px 0 24px}
         </div>
 
         <button class="btn dark" type="submit" id="submitBtn">
-          Transmit Enquiry <span>↗</span>
+          Send Message <span>→</span>
         </button>
-
-        <p class="form-note">🔒 Powered by PHP backend processing. We strictly protect your intellectual property under mutual non-disclosure.</p>
       </form>
     </div>
   </section>
@@ -781,13 +822,14 @@ footer{background:#030a14;padding:40px 0 24px}
     <div class="foot-top">
       <div class="foot-brand">
         <a class="logo" href="#home">
-          <span class="logo-mark">N</span>
-          <span>Nexvory<small>PRIVATE LIMITED</small></span>
+          <img src="assets/logo.png" alt="Nexvory IT Technologies Logo" class="brand-logo-img">
+          <span>Nexvory<small>IT TECHNOLOGIES</small></span>
         </a>
         <p>Modern thinking. Dependable execution. Complete IT facilities, fullstack web architectures, and cloud DevOps engineering built for what comes next.</p>
-        <p style="font-size:11px;color:var(--lime);margin-top:8px">
-          <b>Leadership:</b> Amrutkiran Kshirsagar (MCA) & Pratik Salunkhe (B.E. DevOps)
-        </p>
+        <div style="margin-top:14px;font-size:11.5px;color:#a8b9cc;line-height:1.7;">
+          <div>✉ <a href="mailto:<?= htmlspecialchars($company_email) ?>" style="color:var(--lime);"><?= htmlspecialchars($company_email) ?></a> &nbsp;•&nbsp; <a href="mailto:<?= htmlspecialchars($company_email_alt) ?>"><?= htmlspecialchars($company_email_alt) ?></a></div>
+          <div>📞 Amrutkiran: <a href="tel:+919373799792" style="color:white;font-weight:700;">+91 9373799792</a> &nbsp;|&nbsp; Pratik: <a href="tel:+919923729253" style="color:white;font-weight:700;">+91 9923729253</a></div>
+        </div>
       </div>
 
       <div class="foot-links">
@@ -799,16 +841,17 @@ footer{background:#030a14;padding:40px 0 24px}
           <a href="#projects">Our work</a>
         </div>
         <div>
-          <h4>Company</h4>
-          <a href="#process">Our process</a>
-          <a href="#contact">Contact us</a>
+          <h4>Contact & Connect</h4>
+          <a href="mailto:<?= htmlspecialchars($company_email) ?>"><?= htmlspecialchars($company_email) ?></a>
+          <a href="tel:+919373799792">+91 9373799792</a>
+          <a href="tel:+919923729253">+91 9923729253</a>
           <a href="#home">Back to top ↑</a>
         </div>
       </div>
     </div>
 
     <div class="foot-bottom">
-      <span>© <?= date('Y') ?> Nexvory Pvt. Ltd. All rights reserved. &nbsp;•&nbsp; 10+ Websites Delivered &nbsp;•&nbsp; 10+ Happy Clients</span>
+      <span>© <?= date('Y') ?> Nexvory IT Technologies. All rights reserved. &nbsp;•&nbsp; 10+ Websites Delivered &nbsp;•&nbsp; 10+ Happy Clients</span>
       <span><b>INNOVATE · BUILD · GROW</b> &nbsp; Designed for what comes next.</span>
     </div>
   </div>
@@ -840,7 +883,7 @@ contactForm.addEventListener('submit', function(e) {
   if (window.fetch && window.FormData) {
     e.preventDefault();
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Transmitting... <span>⏳</span>';
+    submitBtn.innerHTML = 'Sending Message... <span>⏳</span>';
 
     const formData = new FormData(contactForm);
 
@@ -863,7 +906,7 @@ contactForm.addEventListener('submit', function(e) {
         ajaxResponse.innerHTML = '<span>⚠</span><div>' + data.message + '</div>';
       }
       submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Transmit Enquiry <span>↗</span>';
+      submitBtn.innerHTML = 'Send Message <span>→</span>';
     })
     .catch(() => {
       // If AJAX fails, fall back to native PHP POST

@@ -8,5 +8,15 @@
         "service": "All IT Facilities",
         "message": "We need a complete IT facility setup with fullstack web and cloud DevOps.",
         "ip": "::1"
+    },
+    {
+        "id": "INQ-687C03",
+        "timestamp": "2026-11-02 15:45:10",
+        "name": "Test Client",
+        "email": "client@test.com",
+        "company": "Not provided",
+        "service": "All IT Facilities",
+        "message": "Looking for fullstack services",
+        "ip": "::1"
     }
 ]
