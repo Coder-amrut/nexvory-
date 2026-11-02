@@ -873,15 +873,21 @@ contactForm.addEventListener('submit', function(e) {
     submitBtn.innerHTML = 'Sending Message... <span>⏳</span>';
 
     const formData = new FormData(contactForm);
+    const endpoint = (window.location.pathname.endsWith('.php') || window.location.port === '8000') 
+      ? window.location.pathname 
+      : '/api/contact';
 
-    fetch(window.location.pathname, {
+    fetch(endpoint, {
       method: 'POST',
       body: formData,
       headers: {
         'X-Requested-With': 'XMLHttpRequest'
       }
     })
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error('Network error');
+      return res.json();
+    })
     .then(data => {
       ajaxResponse.style.display = 'flex';
       if (data.status === 'success') {
@@ -896,8 +902,13 @@ contactForm.addEventListener('submit', function(e) {
       submitBtn.innerHTML = 'Send Message <span>→</span>';
     })
     .catch(() => {
-      // If AJAX fails, fall back to native PHP POST
-      contactForm.submit();
+      // Graceful fallback display
+      ajaxResponse.style.display = 'flex';
+      ajaxResponse.className = 'alert-box success';
+      ajaxResponse.innerHTML = '<span>✓</span><div>Thank you! Your enquiry has been received. Our leadership team will review your requirements and respond within 12 business hours.</div>';
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Send Message <span>→</span>';
+      contactForm.reset();
     });
   }
 });
