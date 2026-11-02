@@ -1,28 +1,813 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ABC — Enter The Digital Intelligence | Advanced Systems & AI Engineering</title>
-    <meta name="description" content="ABC engineers mission-critical software architectures, neural AI systems, resilient cloud infrastructure, and cryptographic cybersecurity for enterprise transformation." />
-    <meta name="keywords" content="Software Engineering, Artificial Intelligence, Cloud Infrastructure, Cybersecurity, Systems Integration, IT Architecture" />
-    <meta name="theme-color" content="#08090C" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071426">
+<title>Nexvory Pvt. Ltd. | Innovate · Build · Grow</title>
+<meta name="description" content="Nexvory Pvt. Ltd. — Complete IT Facilities, Custom Software Development, Cloud & DevOps Infrastructure, and Enterprise Web Platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#071426;
+  --bg2:#0b1d33;
+  --lime:#c9ff3d;
+  --lime2:#a9ed22;
+  --white:#f7faff;
+  --muted:#a5b5c9;
+  --line:rgba(255,255,255,.13);
+  --ink:#101e31;
+  --paper:#f2f6fc;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:"Arial","Helvetica Neue",Helvetica,"DM Sans",sans-serif;background:var(--bg);color:var(--white);line-height:1.55}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1240px,calc(100% - 44px));margin:auto}
+.micro{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--lime);display:flex;align-items:center;gap:10px}
+.micro:before{content:"";width:25px;height:2px;background:var(--lime)}
+h1,h2,h3,h4{font-family:"Manrope","Arial",sans-serif;letter-spacing:-.04em;line-height:1.08}
+h2{font-size:clamp(32px,4vw,49px)}
+.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:11px;background:var(--lime);color:#071426;padding:13px 22px;border-radius:999px;font-size:12px;font-weight:800;transition:.25s;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px #c9ff3d35}
+.btn.outline{background:transparent;color:white;border:1px solid #ffffff55}
+.btn.outline:hover{background:#ffffff15;border-color:var(--lime);color:var(--lime)}
+.btn.dark{background:#071426;color:white}
+.btn.dark:hover{background:#0b1d33;color:var(--lime)}
+.topline{background:#030a14;padding:9px 0;color:#a8b6c9;font-size:11px;border-bottom:1px solid #ffffff10}
+.topline .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center}
+.topline b{color:var(--lime)}
+header{height:76px;position:sticky;top:0;z-index:30;background:#071426eF;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:10px;font:800 21px Manrope,Arial;letter-spacing:-.06em}
+.logo-mark{width:38px;height:38px;display:grid;place-items:center;background:linear-gradient(135deg,#e4ff92,var(--lime2));color:#071426;border-radius:12px 5px 12px 5px;font:900 24px Manrope;transform:rotate(-4deg);box-shadow:0 0 25px #c9ff3d22}
+.logo small{display:block;font:700 9px "DM Sans",Arial;letter-spacing:.12em;color:#9cacc0;margin-top:-3px}
+.links{display:flex;align-items:center;gap:25px;font-size:12.5px;color:#d2dce8;font-weight:600}
+.links a{transition:.2s}
+.links a:hover{color:var(--lime)}
+.navright{display:flex;align-items:center;gap:12px}
+.hamb{display:none;background:transparent;color:white;border:1px solid var(--line);padding:8px 12px;border-radius:10px;cursor:pointer}
+.hero{min-height:650px;position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;background:#071426}
+.hero-bg{position:absolute;inset:0;z-index:-3;background:linear-gradient(90deg,#071426 0%,#071426f5 32%,#071426a0 55%,#07142630 100%),linear-gradient(0deg,#071426 0%,transparent 32%),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90") center 48%/cover}
+.hero:before{content:"";position:absolute;z-index:-2;width:520px;height:520px;right:5%;top:-200px;border-radius:50%;background:#167bff33;filter:blur(45px)}
+.hero-content{padding:80px 0 110px;max-width:780px}
+.hero h1{font-size:clamp(44px,6vw,76px);font-weight:800;margin:20px 0 22px}
+.hero h1 em{font-style:normal;color:var(--lime);text-shadow:0 0 35px #c9ff3d24}
+.hero p{max-width:560px;color:#c4d0df;font-size:15px;line-height:1.6}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.hero-proof{display:flex;gap:20px;align-items:center;margin-top:36px;color:#c1ccda;font-size:11.5px}
+.proof-icon{display:flex}
+.proof-icon span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:2px solid var(--bg);background:#1e3855;margin-left:-7px;font-size:10px;font-weight:800;color:var(--lime)}
+.proof-icon span:first-child{margin-left:0}
+.hero-note{position:absolute;right:6%;top:18%;font:italic 600 24px Manrope;color:white;transform:rotate(-7deg);text-shadow:0 3px 20px #071426}
+.hero-note span{display:block;color:var(--lime);font-size:13px;text-align:right;margin-top:7px;font-style:normal}
+.hero-stats{position:absolute;bottom:0;left:0;right:0;background:#06101bd9;border-top:1px solid #ffffff1b;backdrop-filter:blur(12px)}
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);padding:18px 0}
+.stat{display:flex;align-items:center;gap:14px;padding:0 20px;border-left:1px solid #ffffff2a}
+.stat:first-child{border:0;padding-left:0}
+.stat .sym{font-size:24px;color:var(--lime)}
+.stat strong{display:block;font:800 24px Manrope;color:var(--lime)}
+.stat small{font-size:10.5px;color:#c3cfde;font-weight:600}
+.section{padding:90px 0}
+.about{background:linear-gradient(110deg,#f3f7fc,#dce7f5);color:var(--ink)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:65px}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:410px;object-fit:cover;border-radius:24px 24px 85px 24px;box-shadow:0 25px 60px #0b1d3324}
+.photo-chip{position:absolute;bottom:22px;left:-16px;background:var(--lime);color:#071426;padding:17px 22px;border-radius:15px;font:800 14px Manrope;box-shadow:0 10px 30px #07142622}
+.about .micro{color:#577f13}
+.about .micro:before{background:#78a91e}
+.about h2{margin:16px 0}
+.about p{font-size:13.5px;color:#59677a;margin:13px 0;line-height:1.6}
+.feature-pills{display:flex;gap:9px;flex-wrap:wrap;margin:24px 0}
+.feature-pills span{border:1px solid #c9d5e3;border-radius:999px;padding:8px 12px;font-size:10.5px;font-weight:700;background:#ffffff90}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:35px;margin-bottom:38px}
+.section-head p{max-width:440px;color:var(--muted);font-size:13.5px;line-height:1.55}
+.services{background:var(--bg)}
+.services h2,.projects h2,.process h2{margin-top:14px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{position:relative;min-height:300px;border:1px solid #ffffff18;border-radius:20px;overflow:hidden;background:#0d2037;transition:.3s;display:flex;flex-direction:column;justify-content:space-between}
+.service:hover{transform:translateY(-6px);border-color:#c9ff3d88;box-shadow:0 18px 40px #0003}
+.service img{width:100%;height:150px;object-fit:cover;opacity:.86;transition:.45s}
+.service:hover img{transform:scale(1.04);opacity:1}
+.service-body{padding:18px 19px 20px}
+.service h3{font-size:18px;margin-bottom:8px}
+.service p{font-size:11.5px;color:#aebed1;max-width:320px;line-height:1.5}
+.service-arrow{position:absolute;right:16px;top:128px;background:var(--lime);color:var(--bg);width:39px;height:39px;border-radius:50%;display:grid;place-items:center;font-size:19px;border:4px solid #0d2037;font-weight:bold}
+.service-badge{display:inline-block;padding:3px 8px;border-radius:6px;background:#c9ff3d20;color:var(--lime);font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.services-intro{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.services-intro p{color:#a8b8cc;font-size:13.5px;margin:15px 0 22px;max-width:300px}
+.facility-bar{background:#0d2037;border:1.5px solid #c9ff3d44;border-radius:18px;padding:24px 30px;margin-bottom:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.facility-bar h4{font-size:18px;color:white}
+.facility-bar p{font-size:12px;color:#aebed1;margin-top:4px}
+.team{background:#0b1d33;padding:90px 0}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.member-card{background:#071426;border:1.5px solid #ffffff14;border-radius:24px;padding:32px 30px;transition:.3s;position:relative;overflow:hidden}
+.member-card:hover{border-color:#c9ff3d88;box-shadow:0 15px 45px #00000040;transform:translateY(-4px)}
+.member-top{display:flex;justify-content:space-between;align-items:flex-start;gap:15px;margin-bottom:16px}
+.member-avatar{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#c9ff3d,#167bff);display:grid;place-items:center;font:800 24px Manrope;color:#071426}
+.member-tag{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:#c9ff3d18;color:var(--lime);border:1px solid #c9ff3d44}
+.member-card h3{font-size:23px;margin-bottom:4px}
+.member-degree{font-size:13px;color:var(--lime);font-weight:700;margin-bottom:4px}
+.member-role{font-size:11.5px;color:#8fa3b8;font-weight:600;margin-bottom:16px;text-transform:uppercase;letter-spacing:.04em}
+.member-card p{font-size:12.5px;color:#c2d0e0;line-height:1.6;margin-bottom:20px}
+.member-pills{display:flex;flex-wrap:wrap;gap:7px}
+.member-pills span{padding:5px 10px;background:#0f243c;border:1px solid #ffffff12;border-radius:8px;font-size:10px;color:#a0b5cc;font-weight:700}
+.projects{background:#071426}
+.projects-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.project{position:relative;min-height:320px;border-radius:21px;overflow:hidden;border:1px solid #ffffff16}
+.project img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}
+.project:hover img{transform:scale(1.05)}
+.project:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#06101bf0 0%,#06101b90 40%,transparent 80%)}
+.project-copy{position:absolute;z-index:1;bottom:23px;left:24px;right:24px}
+.tag{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--lime);font-weight:800}
+.project h3{font-size:22px;margin:9px 0}
+.project p{font-size:11.5px;color:#d3deea;max-width:420px}
+.process{background:#f3f7fc;color:var(--ink)}
+.process .micro{color:#577f13}
+.process .micro:before{background:#78a91e}
+.process .section-head p{color:#647286}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{border-top:1px solid #cbd5e2;padding-top:18px}
+.step .num{font:800 12px Manrope;color:#648b20;letter-spacing:.12em}
+.step .step-icon{margin:19px 0 12px;width:46px;height:46px;border-radius:15px;background:#e2f5b8;display:grid;place-items:center;font-size:21px}
+.step h3{font-size:17px;margin-bottom:9px}
+.step p{font-size:12px;color:#69778a}
+.values{background:var(--bg);padding:55px 0}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.value{display:flex;align-items:center;gap:15px;padding:18px;border:1px solid var(--line);border-radius:16px;background:#0b1d33}
+.value i{font-style:normal;color:var(--lime);font-size:25px}
+.value strong{display:block;font:700 14px Manrope}
+.value small{color:#9eafc4;font-size:10px}
+.cta{padding:0 0 85px;background:var(--bg)}
+.cta-panel{position:relative;overflow:hidden;background:linear-gradient(110deg,#d4ff66,#a9ed22);color:#071426;border-radius:25px;padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cta-panel:after{content:"N";position:absolute;right:20%;top:-105px;font:900 260px Manrope;color:#0714260a}
+.cta-panel h2{font-size:clamp(28px,4vw,42px);max-width:650px}
+.cta-panel p{font-size:12.5px;margin-top:11px;color:#3b4d20}
+.cta-panel .btn{background:#071426;color:white;position:relative;z-index:1;white-space:nowrap}
+.contact{background:#eaf0f7;color:var(--ink)}
+.contact .micro{color:#577f13}
+.contact .micro:before{background:#78a91e}
+.contact h2{margin:15px 0}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}
+.contact-copy>p{font-size:13.5px;color:#647286;margin-bottom:25px}
+.contact-info{display:grid;gap:14px}
+.info{display:flex;gap:13px;align-items:center}
+.info i{font-style:normal;display:grid;place-items:center;width:42px;height:42px;background:white;border-radius:13px;font-size:18px}
+.info b{display:block;font-size:12.5px}
+.info span{font-size:11.5px;color:#69778a}
+.form{padding:30px;background:white;border-radius:21px;box-shadow:0 20px 55px #10223b13}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:10px;font-weight:800;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;border:1px solid #dce4ee;background:#f9fbfd;border-radius:10px;padding:12px;font-size:12px;outline:none;color:#101e31}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#93c930;box-shadow:0 0 0 3px #c9ff3d30}
+.field textarea{min-height:105px;resize:vertical}
+.form-note{font-size:10.5px;color:#758196;margin-top:12px}
+.alert-box{padding:12px 16px;border-radius:10px;font-size:12px;margin-bottom:18px;display:flex;align-items:center;gap:10px;font-weight:600}
+.alert-box.success{background:#e9f8cf;color:#2c5409;border:1px solid #a9ed22}
+.alert-box.error{background:#fee2e2;color:#991b1b;border:1px solid #f87171}
+footer{background:#030a14;padding:40px 0 24px}
+.foot-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:30px;border-bottom:1px solid #ffffff1b}
+.foot-brand p{font-size:11.5px;color:#9eafc4;max-width:320px;margin-top:13px;line-height:1.6}
+.foot-links{display:flex;gap:50px}
+.foot-links h4{font-size:11px;margin-bottom:13px;letter-spacing:0}
+.foot-links a{display:block;color:#9eafc4;font-size:11px;margin:9px 0}
+.foot-links a:hover{color:var(--lime)}
+.foot-bottom{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-top:18px;font-size:10.5px;color:#788aa2}
+.foot-bottom b{color:var(--lime)}
 
-    <!-- Open Graph / Meta -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="ABC — Enter The Digital Intelligence" />
-    <meta property="og:description" content="Intelligent software. Connected systems. Technology built for what's coming." />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+@media(max-width:900px){
+  .links{gap:13px}
+  .hero-note{right:4%;font-size:18px}
+  .about-grid,.contact-grid,.team-grid{gap:35px}
+  .stat{padding:0 12px}
+  .stat strong{font-size:20px}
+  .foot-links{gap:25px}
+  .team-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .wrap{width:calc(100% - 30px)}
+  .topline .wrap{justify-content:center}
+  .topline .wrap span:last-child{display:none}
+  header{height:68px}
+  .hamb{display:block}
+  .navright>.btn{display:none}
+  .links{display:none;position:absolute;top:68px;left:15px;right:15px;background:#0b1d33;padding:16px;border:1px solid var(--line);border-radius:15px;flex-direction:column;align-items:stretch;gap:0}
+  .links.open{display:flex}
+  .links a{padding:12px}
+  .hero{min-height:680px;align-items:flex-start}
+  .hero-bg{background:linear-gradient(90deg,#071426f5,#071426bb 65%,#07142670),linear-gradient(0deg,#071426 0%,transparent 65%),url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85") 58% center/cover}
+  .hero-content{padding:67px 0 150px}
+  .hero h1{font-size:clamp(43px,12vw,62px)}
+  .hero p{font-size:13.5px}
+  .hero-note{display:none}
+  .hero-stats{bottom:0}
+  .statrow{grid-template-columns:1fr 1fr;gap:12px;padding:13px 0}
+  .stat{padding:0 8px;border:0}
+  .stat:first-child{padding-left:8px}
+  .stat .sym{font-size:19px}
+  .stat strong{font-size:18px}
+  .stat small{font-size:9.5px}
+  .section{padding:65px 0}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .about-photo img{height:310px}
+  .photo-chip{left:10px}
+  .section-head{display:block}
+  .section-head>p{margin-top:15px}
+  .services-grid{grid-template-columns:1fr}
+  .service{min-height:0}
+  .service img{height:175px}
+  .service-arrow{top:151px}
+  .services-intro{padding:0 0 5px}
+  .projects-grid{grid-template-columns:1fr}
+  .project{min-height:280px}
+  .steps{grid-template-columns:1fr 1fr;gap:25px 15px}
+  .values-grid{grid-template-columns:1fr}
+  .cta{padding-bottom:60px}
+  .cta-panel{padding:32px 25px;display:block}
+  .cta-panel .btn{margin-top:22px}
+  .fields{grid-template-columns:1fr;gap:0}
+  .form{padding:20px}
+  .foot-top{display:block}
+  .foot-links{margin-top:28px;justify-content:space-between;gap:15px}
+  .foot-bottom{margin-top:5px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{transition:none!important}
+}
+</style>
+</head>
+<body>
 
-    <!-- Favicon SVG -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2308090C'/><polygon points='50,15 85,75 15,75' stroke='%2300F0FF' stroke-width='6' fill='none'/><circle cx='50' cy='52' r='10' fill='%230066FF'/><line x1='50' y1='15' x2='50' y2='52' stroke='%2300F0FF' stroke-width='4'/></svg>" />
-  </head>
-  <body class="bg-dark text-slate-100 selection:bg-cyan-500 selection:text-black antialiased" style="font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!-- Top Announcement Line -->
+<div class="topline">
+  <div class="wrap">
+    <span><b>INTRODUCING NEXVORY PVT. LTD.</b> &nbsp; Complete IT Facilities, Software & Cloud Systems.</span>
+    <span><b>10+</b> Websites Delivered &nbsp;•&nbsp; <b>10+</b> Happy Clients &nbsp; <b>↗</b></span>
+  </div>
+</div>
+
+<!-- Sticky Header Navigation -->
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home">
+      <span class="logo-mark">N</span>
+      <span>Nexvory<small>PRIVATE LIMITED</small></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">IT Facilities</a>
+      <a href="#team">Leadership Team</a>
+      <a href="#projects">Our Work</a>
+      <a href="#process">Our Process</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="navright">
+      <a class="btn" href="#contact">Get in touch <span>↗</span></a>
+      <button class="hamb" id="hamb" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="micro">Welcome to Nexvory Pvt. Ltd.</div>
+        <h1>Innovating today.<br>Building a <em>better tomorrow.</em></h1>
+        <p>We provide complete, end-to-end IT facilities — from custom fullstack software engineering and cloud DevOps infrastructure to modern web platforms. Led by industry experts to turn ambitious ideas into dependable reality.</p>
+        
+        <div class="hero-actions">
+          <a class="btn" href="#services">Explore all IT facilities <span>→</span></a>
+          <a class="btn outline" href="#team">Meet our leadership <span>↗</span></a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="proof-icon">
+            <span>10+</span>
+            <span>★</span>
+            <span>+</span>
+          </div>
+          <span><b>10+ Websites Delivered</b> &nbsp;•&nbsp; <b>10+ Happy Clients</b><br><b style="color:white">Fullstack Development & DevOps Engineering.</b></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-note">
+      Dream big.<br>Grow bigger.
+      <span>— Nexvory mindset</span>
+    </div>
+
+    <!-- Hero Stats Bar -->
+    <div class="hero-stats">
+      <div class="wrap statrow">
+                  <div class="stat">
+            <span class="sym">✧</span>
+            <div>
+              <strong>10+</strong>
+              <small>Websites & Platforms Delivered</small>
+            </div>
+          </div>
+                  <div class="stat">
+            <span class="sym">⌘</span>
+            <div>
+              <strong>10+</strong>
+              <small>Happy Enterprise Clients</small>
+            </div>
+          </div>
+                  <div class="stat">
+            <span class="sym">↗</span>
+            <div>
+              <strong>100%</strong>
+              <small>Focus on Your Goals</small>
+            </div>
+          </div>
+                  <div class="stat">
+            <span class="sym">∞</span>
+            <div>
+              <strong>99.99%</strong>
+              <small>Cloud & System SLA Uptime</small>
+            </div>
+          </div>
+              </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1100&q=85" alt="Nexvory collaborative workspace" loading="lazy">
+        <div class="photo-chip">
+          Think clearly.<br>Build thoughtfully.
+        </div>
+      </div>
+      <div>
+        <div class="micro">A little about us</div>
+        <h2>Who <span style="color:#76a91b">we are.</span></h2>
+        <p>Nexvory Pvt. Ltd. is an advanced technology engineering company built around a simple principle: real progress happens when deep academic software knowledge meets practical, zero-downtime execution.</p>
+        <p>We provide <strong>all IT facilities under one roof</strong> — complete web development, custom software applications, cloud DevOps, cybersecurity, database systems, and round-the-clock IT management. Having successfully delivered 10+ corporate web applications with 100% on-time accuracy, we treat your business technology as an evolving asset.</p>
+        <div class="feature-pills">
+          <span>✦ 10+ Delivered Platforms</span>
+          <span>↗ 10+ Happy Clients</span>
+          <span>◈ End-to-End IT Facilities</span>
+          <span>⚡ 99.99% Uptime Guarantee</span>
+        </div>
+        <a class="btn dark" href="#contact">Discuss your project <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- All IT Facilities & Services Section -->
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="micro">Comprehensive IT Facilities</div>
+          <h2>All IT facilities we <span style="color:var(--lime)">provide.</span></h2>
+        </div>
+        <p>From frontend websites and enterprise backends to cloud DevOps and 24/7 IT management. We provide all technology facilities under one trusted banner.</p>
+      </div>
+
+      <!-- Facility Highlight Banner -->
+      <div class="facility-bar">
+        <div>
+          <h4>Complete 360° IT Infrastructure & Solutions</h4>
+          <p>Everything your enterprise needs: Domain, Hosting, Fullstack Web, Mobile, Cloud CI/CD, Cyber Defense & Managed IT Support.</p>
+        </div>
+        <a class="btn" href="#contact">Request IT Facility Audit ↗</a>
+      </div>
+
+      <div class="services-grid">
+        <div class="services-intro">
+          <p>We combine a future-ready engineering mindset with attention to the exact architectural details that make systems reliable in the real world.</p>
+          <a class="btn" href="#contact">Discuss your project ↗</a>
+        </div>
+
+                  <article class="service">
+            <div style="position:relative;">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Fullstack Web &amp; Platform Engineering" loading="lazy">
+              <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-body">
+              <span class="service-badge">10+ Live Sites</span>
+              <h3>Fullstack Web &amp; Platform Engineering</h3>
+              <p>High-performance corporate portals, reactive web applications, Next.js, PHP, React, and robust API backends.</p>
+            </div>
+          </article>
+                  <article class="service">
+            <div style="position:relative;">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Cloud Infrastructure &amp; DevOps" loading="lazy">
+              <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-body">
+              <span class="service-badge">Zero Downtime</span>
+              <h3>Cloud Infrastructure &amp; DevOps</h3>
+              <p>Multi-cloud architectures (AWS, GCP, Azure), Kubernetes cluster meshes, automated CI/CD pipelines, and zero-downtime rollouts.</p>
+            </div>
+          </article>
+                  <article class="service">
+            <div style="position:relative;">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Custom Software &amp; Enterprise ERP" loading="lazy">
+              <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-body">
+              <span class="service-badge">Domain Driven</span>
+              <h3>Custom Software &amp; Enterprise ERP</h3>
+              <p>Tailored business software, CRM systems, inventory management, deterministic workflow engines, and legacy modernisation.</p>
+            </div>
+          </article>
+                  <article class="service">
+            <div style="position:relative;">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Cybersecurity &amp; Zero-Trust Defense" loading="lazy">
+              <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-body">
+              <span class="service-badge">Bank Grade</span>
+              <h3>Cybersecurity &amp; Zero-Trust Defense</h3>
+              <p>Hardware-grade SSL/TLS, automated penetration testing, compliance benchmarks, and kernel-level network protection.</p>
+            </div>
+          </article>
+                  <article class="service">
+            <div style="position:relative;">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="AI, ML &amp; Workflow Automation" loading="lazy">
+              <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-body">
+              <span class="service-badge">Intelligent Tech</span>
+              <h3>AI, ML &amp; Workflow Automation</h3>
+              <p>Intelligent AI agents, fine-tuned domain models, automated cognitive pipelines, and real-time business decision bots.</p>
+            </div>
+          </article>
+                  <article class="service">
+            <div style="position:relative;">
+              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Managed IT, Domain &amp; 24/7 Support" loading="lazy">
+              <span class="service-arrow">↗</span>
+            </div>
+            <div class="service-body">
+              <span class="service-badge">24/7 Managed</span>
+              <h3>Managed IT, Domain &amp; 24/7 Support</h3>
+              <p>Complete end-to-end IT department facility: domain registration, cloud hosting, email suites, and round-the-clock technical maintenance.</p>
+            </div>
+          </article>
+              </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Core Team Section -->
+  <section class="section team" id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="micro">Our Leadership & Technical Experts</div>
+          <h2>Driven by <span style="color:var(--lime)">industry experts.</span></h2>
+        </div>
+        <p>Led by formal computer application and engineering specialists who architect, write, deploy, and safeguard your production systems directly.</p>
+      </div>
+
+      <div class="team-grid">
+                  <div class="member-card">
+            <div class="member-top">
+              <div class="member-avatar">A</div>
+              <span class="member-tag">10+ Web Platforms</span>
+            </div>
+            <h3>Amrutkiran Kshirsagar</h3>
+            <div class="member-degree">Master of Computer Applications (MCA)</div>
+            <div class="member-role">Fullstack Developer &amp; Industry Expert</div>
+            <p>Post-graduate in Computer Applications with extensive industry expertise in fullstack software architecture, scalable web technologies, database modeling, and modern reactive systems. Successfully architected and shipped over 10 enterprise platforms with 100% client satisfaction.</p>
+            <div class="member-pills">
+                              <span>✓ MCA Post Graduate</span>
+                              <span>✓ Fullstack Developer</span>
+                              <span>✓ Industry Expert</span>
+                              <span>✓ 10+ Delivered Websites</span>
+                          </div>
+          </div>
+                  <div class="member-card">
+            <div class="member-top">
+              <div class="member-avatar">P</div>
+              <span class="member-tag">99.99% Uptime</span>
+            </div>
+            <h3>Pratik Salunkhe</h3>
+            <div class="member-degree">Bachelor of Engineering (B.E.)</div>
+            <div class="member-role">DevOps Engineer &amp; Industry Expert</div>
+            <p>Engineering graduate and seasoned DevOps industry expert specializing in multi-region cloud topology, containerized Kubernetes meshes, automated CI/CD GitOps pipelines, and zero-trust infrastructure. Guarantees 99.99% high availability and seamless production deployments.</p>
+            <div class="member-pills">
+                              <span>✓ B.E. Engineering</span>
+                              <span>✓ DevOps Specialist</span>
+                              <span>✓ Industry Expert</span>
+                              <span>✓ Cloud Mesh Architect</span>
+                          </div>
+          </div>
+              </div>
+    </div>
+  </section>
+
+  <!-- Projects / Our Work Section -->
+  <section class="section projects" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="micro">Our work</div>
+          <h2>10+ Solutions with room<br>to <span style="color:var(--lime)">become real.</span></h2>
+        </div>
+        <p>With 10+ live websites delivered and 10+ satisfied enterprise clients, here is a preview of the architectural solutions we build and maintain.</p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1300&q=85" alt="High-throughput digital enterprise system" loading="lazy">
+          <div class="project-copy">
+            <span class="tag">Enterprise Platform · 10+ Delivered</span>
+            <h3>Custom High-Speed Web Architectures</h3>
+            <p>Fullstack reactive portals and distributed microservice architectures engineered for 10+ enterprise partners with sub-second response times.</p>
+          </div>
+        </article>
+
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1000&q=85" alt="DevOps and cloud infrastructure workspace" loading="lazy">
+          <div class="project-copy">
+            <span class="tag">DevOps & Cloud · Zero Downtime</span>
+            <h3>Automated Cloud Infrastructure & CI/CD</h3>
+            <p>Resilient Kubernetes cluster deployments, multi-region container orchestration, and zero-downtime automated pipelines.</p>
+          </div>
+        </article>
+      </div>
+      <p style="font-size:11px;color:#91a3b9;margin-top:14px">Verified milestone: 10+ corporate web applications deployed live with 100% on-time handover rate.</p>
+    </div>
+  </section>
+
+  <!-- Our Process Section -->
+  <section class="section process" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="micro">Our process</div>
+          <h2>From first thought<br>to <span style="color:#76a91b">forward motion.</span></h2>
+        </div>
+        <p>Clear steps keep a project grounded, collaborative, and moving reliably in the right direction.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="num">01 / DISCOVER</span>
+          <div class="step-icon">⌕</div>
+          <h3>Understand</h3>
+          <p>Listen carefully, ask the right technical questions, and define the real domain requirement.</p>
+        </article>
+
+        <article class="step">
+          <span class="num">02 / PLAN</span>
+          <div class="step-icon">▤</div>
+          <h3>Shape the plan</h3>
+          <p>Set architectural priorities, agree on scope, and choose proven technical primitives.</p>
+        </article>
+
+        <article class="step">
+          <span class="num">03 / DELIVER</span>
+          <div class="step-icon">↗</div>
+          <h3>Make it happen</h3>
+          <p>Engineer clean code, automate testing, configure cloud CI/CD, and deploy with zero downtime.</p>
+        </article>
+
+        <article class="step">
+          <span class="num">04 / IMPROVE</span>
+          <div class="step-icon">⚙</div>
+          <h3>Keep growing</h3>
+          <p>Continuous monitoring, security updates, and performance tuning for lasting business growth.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values">
+    <div class="wrap values-grid">
+      <div class="value">
+        <i>✧</i>
+        <div>
+          <strong>Innovation driven</strong>
+          <small>Stay curious. Explore cleaner, faster solutions.</small>
+        </div>
+      </div>
+      <div class="value">
+        <i>◎</i>
+        <div>
+          <strong>Client-centric approach</strong>
+          <small>Start with the actual need. 10+ happy partners.</small>
+        </div>
+      </div>
+      <div class="value">
+        <i>♧</i>
+        <div>
+          <strong>Sustainable growth</strong>
+          <small>Build enterprise value that lasts decades.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta-panel">
+        <div>
+          <h2>Let's build something great together.</h2>
+          <p>Tell us what you're planning. Amrutkiran (MCA) & Pratik (DevOps) will personally guide your technical roadmap.</p>
+        </div>
+        <a class="btn" href="#contact">Start a conversation <span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section with PHP Backend Processing -->
+  <section class="section contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <div class="micro">Get in touch</div>
+        <h2>What are you<br>looking to <span style="color:#76a91b">build?</span></h2>
+        <p>Share a little about your requirement, challenge, or upcoming project. Our founding engineers will connect directly with you.</p>
+
+        <div class="contact-info">
+          <div class="info">
+            <i>✉</i>
+            <div>
+              <b>Direct Email</b>
+              <span>engineering@nexvory.digital</span>
+            </div>
+          </div>
+          <div class="info">
+            <i>⌖</i>
+            <div>
+              <b>Leadership & Facilities</b>
+              <span>Amrutkiran Kshirsagar (MCA) & Pratik Salunkhe (B.E. DevOps)</span>
+            </div>
+          </div>
+          <div class="info">
+            <i>◷</i>
+            <div>
+              <b>Availability & SLA</b>
+              <span>Mon – Sat: 09:00 – 19:00 IST (24/7 Managed IT Support)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHP Form -->
+      <form class="form" id="contactForm" method="POST" action="#contact">
+        
+        <div id="ajaxResponse" style="display:none;" class="alert-box"></div>
+
+        <div class="fields">
+          <div class="field">
+            <label for="name">YOUR NAME *</label>
+            <input id="name" name="name" required placeholder="e.g. Alex Mercer" value="">
+          </div>
+          <div class="field">
+            <label for="email">EMAIL ADDRESS *</label>
+            <input id="email" name="email" type="email" required placeholder="you@company.com" value="">
+          </div>
+        </div>
+
+        <div class="fields">
+          <div class="field">
+            <label for="company">COMPANY / ORGANIZATION</label>
+            <input id="company" name="company" placeholder="Company or project name" value="">
+          </div>
+          <div class="field">
+            <label for="service">SERVICE / IT FACILITY NEEDED</label>
+            <select id="service" name="service">
+              <option value="All IT Facilities">All IT Facilities (Comprehensive)</option>
+              <option value="Fullstack Web & Platform">Fullstack Web & Platform Engineering</option>
+              <option value="Cloud Infrastructure & DevOps">Cloud Infrastructure & DevOps</option>
+              <option value="Custom Software & ERP">Custom Software & Enterprise ERP</option>
+              <option value="Cybersecurity & Zero-Trust">Cybersecurity & Zero-Trust Defense</option>
+              <option value="AI, ML & Automation">AI, ML & Automation</option>
+              <option value="Managed IT & 24/7 Support">Managed IT, Domain & 24/7 Support</option>
+              <option value="Other Technical Inquiry">Other Technical Inquiry</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">YOUR MESSAGE / PROJECT SCOPE *</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your project requirements, target timeline, or IT facilities needed..."></textarea>
+        </div>
+
+        <button class="btn dark" type="submit" id="submitBtn">
+          Transmit Enquiry <span>↗</span>
+        </button>
+
+        <p class="form-note">🔒 Powered by PHP backend processing. We strictly protect your intellectual property under mutual non-disclosure.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="#home">
+          <span class="logo-mark">N</span>
+          <span>Nexvory<small>PRIVATE LIMITED</small></span>
+        </a>
+        <p>Modern thinking. Dependable execution. Complete IT facilities, fullstack web architectures, and cloud DevOps engineering built for what comes next.</p>
+        <p style="font-size:11px;color:var(--lime);margin-top:8px">
+          <b>Leadership:</b> Amrutkiran Kshirsagar (MCA) & Pratik Salunkhe (B.E. DevOps)
+        </p>
+      </div>
+
+      <div class="foot-links">
+        <div>
+          <h4>Explore</h4>
+          <a href="#about">About us</a>
+          <a href="#services">IT Facilities</a>
+          <a href="#team">Leadership</a>
+          <a href="#projects">Our work</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#process">Our process</a>
+          <a href="#contact">Contact us</a>
+          <a href="#home">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Nexvory Pvt. Ltd. All rights reserved. &nbsp;•&nbsp; 10+ Websites Delivered &nbsp;•&nbsp; 10+ Happy Clients</span>
+      <span><b>INNOVATE · BUILD · GROW</b> &nbsp; Designed for what comes next.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile Navigation Toggle
+const menu = document.getElementById('hamb');
+const links = document.getElementById('links');
+menu.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+  menu.textContent = open ? '×' : '☰';
+});
+
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  links.classList.remove('open');
+  menu.setAttribute('aria-expanded', 'false');
+  menu.textContent = '☰';
+}));
+
+// AJAX Form Enhancer (Graceful Fallback to standard PHP POST)
+const contactForm = document.getElementById('contactForm');
+const ajaxResponse = document.getElementById('ajaxResponse');
+const submitBtn = document.getElementById('submitBtn');
+
+contactForm.addEventListener('submit', function(e) {
+  // Allow normal PHP submission or AJAX if supported
+  if (window.fetch && window.FormData) {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Transmitting... <span>⏳</span>';
+
+    const formData = new FormData(contactForm);
+
+    fetch(window.location.pathname, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest'
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      ajaxResponse.style.display = 'flex';
+      if (data.status === 'success') {
+        ajaxResponse.className = 'alert-box success';
+        ajaxResponse.innerHTML = '<span>✓</span><div>' + data.message + '</div>';
+        contactForm.reset();
+      } else {
+        ajaxResponse.className = 'alert-box error';
+        ajaxResponse.innerHTML = '<span>⚠</span><div>' + data.message + '</div>';
+      }
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Transmit Enquiry <span>↗</span>';
+    })
+    .catch(() => {
+      // If AJAX fails, fall back to native PHP POST
+      contactForm.submit();
+    });
+  }
+});
+</script>
+</body>
 </html>
