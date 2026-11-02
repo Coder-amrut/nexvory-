@@ -396,19 +396,6 @@ footer{background:#030a14;padding:40px 0 24px}
 </head>
 <body>
 
-<!-- Top Announcement Line -->
-<div class="topline">
-  <div class="wrap">
-    <span><b>NEXVORY IT TECHNOLOGIES</b> &nbsp; Complete IT Facilities, Fullstack Software & Cloud DevOps</span>
-    <span style="display:inline-flex;gap:12px;align-items:center;flex-wrap:wrap;">
-      <a href="mailto:<?= htmlspecialchars($company_email) ?>" style="color:var(--lime);font-weight:700;">✉ <?= htmlspecialchars($company_email) ?></a>
-      <span style="color:#ffffff33;">|</span>
-      <a href="tel:+919373799792" style="color:#d2dce8;">📞 Amrutkiran: <b style="color:white">+91 9373799792</b></a>
-      <span style="color:#ffffff33;">|</span>
-      <a href="tel:+919923729253" style="color:#d2dce8;">Pratik: <b style="color:white">+91 9923729253</b></a>
-    </span>
-  </div>
-</div>
 
 <!-- Sticky Header Navigation -->
 <header>
